@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">重庆旅行图片占位图</title>
+  <desc id="desc">用于景点真实图片暂未确认时的默认占位图</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17213f"/>
+      <stop offset="0.58" stop-color="#22375d"/>
+      <stop offset="1" stop-color="#9d3f2f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <path d="M0 590 C160 530 250 600 385 550 C505 505 590 550 720 520 C875 485 960 525 1200 455 L1200 800 L0 800 Z" fill="#101a2e" opacity=".94"/>
+  <path d="M0 650 C185 610 305 675 505 620 C690 570 780 660 970 595 C1070 560 1125 565 1200 545 L1200 800 L0 800 Z" fill="#0b1222"/>
+  <g fill="#f8efe4" opacity=".82">
+    <rect x="150" y="442" width="48" height="150" rx="3"/>
+    <rect x="218" y="402" width="78" height="190" rx="3"/>
+    <rect x="330" y="472" width="62" height="120" rx="3"/>
+    <rect x="790" y="382" width="72" height="212" rx="3"/>
+    <rect x="900" y="430" width="52" height="164" rx="3"/>
+    <rect x="982" y="350" width="88" height="244" rx="3"/>
+  </g>
+  <g fill="#ffb15c" opacity=".8">
+    <circle cx="232" cy="440" r="6"/>
+    <circle cx="264" cy="468" r="6"/>
+    <circle cx="840" cy="426" r="6"/>
+    <circle cx="1018" cy="398" r="6"/>
+  </g>
+  <text x="600" y="310" text-anchor="middle" fill="#fff7ed" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="54" font-weight="700">图片待替换</text>
+  <text x="600" y="368" text-anchor="middle" fill="#f9dcc4" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="28">未确认合法准确来源前不使用其他地点图片冒充</text>
+</svg>

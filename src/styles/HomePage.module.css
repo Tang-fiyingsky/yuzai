@@ -1,0 +1,664 @@
+.hero {
+  position: relative;
+  min-height: 92vh;
+  overflow: hidden;
+  display: grid;
+  align-items: end;
+  color: #fffaf2;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 14, 28, 0.36), rgba(8, 14, 28, 0.78) 58%, rgba(8, 14, 28, 0.92));
+}
+
+.heroContent {
+  position: relative;
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 96px 0 88px;
+}
+
+.kicker {
+  margin: 0 0 10px;
+  color: #d94b32;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.hero .kicker {
+  color: #ffd2a3;
+}
+
+.hero h1 {
+  margin: 0;
+  max-width: 860px;
+  font-size: clamp(42px, 8vw, 88px);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.heroLead {
+  margin: 18px 0 0;
+  font-size: clamp(18px, 3.8vw, 28px);
+  color: #fff2df;
+}
+
+.heroStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0 0;
+}
+
+.heroStats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 9px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.heroActions,
+.cardActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.primaryButton,
+.secondaryButton,
+.cardActions a,
+.routeSegment a,
+.textButton,
+.backTop,
+.actionHint {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.primaryButton {
+  background: #d94b32;
+  color: #fff;
+}
+
+.secondaryButton {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.section {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+.sectionHeader {
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+
+.sectionHeader h2,
+.dayHero h2 {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 46px);
+  line-height: 1.12;
+  color: #17213f;
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.overviewCard,
+.attractionCard,
+.dayPanel,
+.foodGrid article,
+.budgetTable,
+.checklist,
+.mapBlock,
+.dayTips article {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(23, 33, 63, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 18px 45px rgba(23, 33, 63, 0.08);
+}
+
+.overviewCard {
+  display: flex;
+  gap: 12px;
+  padding: 18px;
+}
+
+.overviewCard svg {
+  color: #d94b32;
+  flex: 0 0 auto;
+}
+
+.overviewCard p,
+.overviewCard strong {
+  margin: 0;
+}
+
+.overviewCard p {
+  color: #667085;
+  font-size: 14px;
+}
+
+.notice,
+.alert,
+.mapFallback {
+  margin: 18px 0;
+  padding: 14px 16px;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+.notice {
+  background: #fff7e8;
+  border: 1px solid #f4c984;
+  color: #6b3f00;
+}
+
+.alert {
+  background: #d94b32;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 4px 0 14px;
+  scrollbar-width: thin;
+}
+
+.tab,
+.activeTab {
+  flex: 0 0 auto;
+  border: 1px solid rgba(23, 33, 63, 0.12);
+  border-radius: 999px;
+  min-height: 44px;
+  padding: 10px 18px;
+  cursor: pointer;
+  background: #fffaf2;
+  color: #17213f;
+  font-weight: 800;
+}
+
+.activeTab {
+  background: #17213f;
+  color: #fff;
+}
+
+.dayPanel {
+  padding: 22px;
+}
+
+.dayHero {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.dayHero p {
+  line-height: 1.7;
+  color: #475467;
+}
+
+.dayFacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 210px;
+}
+
+.dayFacts span {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #eef4ff;
+  color: #17213f;
+  font-weight: 800;
+}
+
+.timeline {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 148px 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(23, 33, 63, 0.08);
+}
+
+.timelineTime {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d94b32;
+  font-weight: 900;
+}
+
+.timelineItem h4,
+.routeSegment h4,
+.foodGrid h3,
+.dayTips h3 {
+  margin: 0 0 6px;
+  color: #17213f;
+}
+
+.timelineItem p,
+.routeSegment p,
+.foodGrid p,
+.dayTips p,
+.description {
+  margin: 0;
+  color: #475467;
+  line-height: 1.65;
+}
+
+.attractionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.attractionCard {
+  overflow: hidden;
+}
+
+.attractionImageWrap {
+  aspect-ratio: 16 / 10;
+  background: #17213f;
+  overflow: hidden;
+}
+
+.attractionImageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.attractionBody {
+  padding: 16px;
+}
+
+.cardTitleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cardTitleRow h3 {
+  margin: 0;
+  font-size: 21px;
+  color: #17213f;
+}
+
+.rating {
+  white-space: nowrap;
+  color: #9d3f2f;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.metaGrid span,
+.tags span {
+  min-width: 0;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tags span {
+  background: #fff0df;
+  color: #7a341f;
+  font-weight: 800;
+}
+
+.notes {
+  margin: 0;
+  padding-left: 18px;
+  color: #475467;
+  line-height: 1.6;
+}
+
+.freeLine {
+  margin: 12px 0 0;
+  color: #25634d;
+  font-weight: 800;
+}
+
+.cardActions a,
+.actionHint {
+  border: 1px solid rgba(23, 33, 63, 0.12);
+  background: #fff;
+  color: #17213f;
+  font-size: 14px;
+}
+
+.actionHint {
+  color: #667085;
+}
+
+.mapBlock {
+  padding: 18px;
+  margin-top: 28px;
+}
+
+.mapHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mapHeader h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #17213f;
+}
+
+.mapStatus {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #ecfdf3;
+  color: #176a43;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.mapCanvas {
+  width: 100%;
+  height: 420px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #17213f;
+}
+
+.mapFallback {
+  background: #fff1f0;
+  border: 1px solid #ffb4a8;
+  color: #842318;
+}
+
+.routeList {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.routeSegment {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid rgba(23, 33, 63, 0.08);
+  border-radius: 8px;
+  background: #fffaf7;
+}
+
+.routeIcon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #17213f;
+  color: #fff;
+}
+
+.routeSegment h4 span {
+  color: #d94b32;
+}
+
+.segmentNote {
+  color: #9d3f2f !important;
+  font-weight: 800;
+}
+
+.routeSegment a {
+  border: 1px solid rgba(23, 33, 63, 0.12);
+  background: #fff;
+  white-space: nowrap;
+}
+
+.dayTips,
+.foodGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.dayTips article,
+.foodGrid article {
+  padding: 18px;
+}
+
+.foodGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.budgetTable,
+.checklist {
+  padding: 12px;
+}
+
+.budgetRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 10px;
+  border-bottom: 1px solid rgba(23, 33, 63, 0.08);
+}
+
+.budgetRow:last-child {
+  border-bottom: 0;
+}
+
+.budgetRow strong {
+  text-align: right;
+}
+
+.checklist {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid rgba(23, 33, 63, 0.08);
+  border-radius: 8px;
+  background: #fffaf7;
+  cursor: pointer;
+}
+
+.checkItem input {
+  width: 20px;
+  height: 20px;
+  accent-color: #d94b32;
+}
+
+.footer {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 42px 0 64px;
+  color: #475467;
+}
+
+.credits {
+  margin-bottom: 18px;
+}
+
+.textButton {
+  border: 0;
+  background: #17213f;
+  color: #fff;
+  cursor: pointer;
+}
+
+.creditPanel {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.creditPanel article {
+  padding: 14px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid rgba(23, 33, 63, 0.08);
+  overflow-wrap: anywhere;
+}
+
+.creditPanel p {
+  margin: 6px 0;
+}
+
+.backTop {
+  margin-top: 18px;
+  width: fit-content;
+  background: #d94b32;
+  color: #fff;
+}
+
+@media (min-width: 900px) {
+  .mapCanvas {
+    height: 520px;
+  }
+}
+
+@media (max-width: 860px) {
+  .overviewGrid,
+  .attractionGrid,
+  .foodGrid,
+  .dayTips,
+  .checklist {
+    grid-template-columns: 1fr;
+  }
+
+  .dayHero,
+  .mapHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dayFacts {
+    width: 100%;
+  }
+
+  .timelineItem {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .routeSegment {
+    grid-template-columns: 44px 1fr;
+  }
+
+  .routeSegment a {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    min-height: 88vh;
+  }
+
+  .heroContent {
+    width: min(100% - 24px, 1120px);
+    padding-bottom: 56px;
+  }
+
+  .section {
+    width: min(100% - 24px, 1120px);
+    padding: 46px 0;
+  }
+
+  .dayPanel,
+  .mapBlock {
+    padding: 14px;
+  }
+
+  .metaGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroStats span,
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .cardActions a,
+  .actionHint {
+    width: 100%;
+  }
+
+  .mapCanvas {
+    height: 420px;
+  }
+}

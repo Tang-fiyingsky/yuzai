@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">重庆夜景占位图</title>
+  <desc id="desc">首页真实夜景图暂未替换时的深色占位图</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10172d"/>
+      <stop offset=".55" stop-color="#21385f"/>
+      <stop offset="1" stop-color="#bd553b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <path d="M0 710 C230 650 390 735 570 675 C770 608 890 720 1110 640 C1265 585 1405 590 1600 520 L1600 1000 L0 1000 Z" fill="#0b1324"/>
+  <path d="M0 790 C290 720 460 830 740 760 C930 713 1050 800 1280 725 C1420 678 1510 690 1600 650 L1600 1000 L0 1000 Z" fill="#070d19"/>
+  <g fill="#ffe5bd" opacity=".78">
+    <rect x="170" y="520" width="70" height="230" rx="4"/>
+    <rect x="270" y="450" width="120" height="300" rx="4"/>
+    <rect x="430" y="575" width="90" height="175" rx="4"/>
+    <rect x="1020" y="405" width="115" height="345" rx="4"/>
+    <rect x="1180" y="510" width="85" height="240" rx="4"/>
+    <rect x="1300" y="370" width="140" height="380" rx="4"/>
+  </g>
+</svg>
